@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements PasswordForgotFra
     private GoogleApiClient mGoogleApiClient;
     AppAccount account=null;
     public boolean logged=false;
-// test dev deploy
+// test deploy and db
     //////////////////////////////////
 ///
 /// activity life
