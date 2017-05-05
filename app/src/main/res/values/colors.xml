@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="authColorTransparent">#003f51b5</color>
+    <color name="authColorBackground">#208097</color>
+    <color name="authColorBackgroundLight">#a0ffffff</color>
+    <color name="authColorBackgroundDark">#4f6266</color>
+    <color name="authColorBackgroundDarkest">#364346</color>
+    <color name="rowTransparentOverColor">#92000000</color>
+
+
+</resources>

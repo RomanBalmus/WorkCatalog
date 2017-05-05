@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        debugConfig {
+            keyAlias 'android'
+            keyPassword 'android'
+            storeFile file('/Users/Programmer/Documents/AndroidKeyStore/workcatalogdebug.jks')
+            storePassword 'android'
+        }
+        releaseConfig {
+            keyAlias 'android'
+            keyPassword 'android'
+            storeFile file('/Users/Programmer/Documents/AndroidKeyStore/workcatalogrelease.jks')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.rb.workcatalog"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+        debug {
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile('com.facebook.android:facebook-android-sdk:4.21.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // https://mvnrepository.com/artifact/commons-collections/commons-collections
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
+
+    compile 'com.google.firebase:firebase-database:10.0.1'
+    compile 'com.google.firebase:firebase-auth:10.0.1'
+    compile 'com.google.android.gms:play-services-auth:10.0.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.firebaseui:firebase-ui-database:1.0.0'
+    compile 'org.lucasr.twowayview:twowayview:0.1.4'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.google.firebase:firebase-storage:10.0.1'
+    compile 'com.google.code.gson:gson:2.7'
+    testCompile 'junit:junit:4.12'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+apply plugin: 'com.google.gms.google-services'

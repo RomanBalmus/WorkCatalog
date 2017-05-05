@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="130dp"
+    android:layout_height="170dp"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/thumbnailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/authColorBackgroundLight"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/stat_notify_sync"
+        app:srcCompat="@android:drawable/stat_notify_sync" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/rowTransparentOverColor"
+        android:scaleType="centerInside"
+        android:id="@+id/overImageView"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/rowDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:textSize="9sp"
+        android:padding="3dp"
+        android:textColor="@android:color/white" />
+</FrameLayout>

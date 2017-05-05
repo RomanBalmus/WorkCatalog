@@ -1,0 +1,175 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.rb.workcatalog.fragments.tabs.LandingTabFragment"
+    android:focusableInTouchMode="true"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:animateLayoutChanges="true"
+        app:expanded="false">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/seffafCollapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="164dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
+                    android:id="@android:id/text1"
+                    android:background="@android:color/transparent"
+                    >
+
+                    <Button
+                        android:id="@+id/tstBtn5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="12dp"
+                        android:text="^"
+                        android:textColor="@android:color/black"
+                        android:gravity="start|center_vertical"
+                        android:fontFamily="sans-serif"
+                        android:textAllCaps="false"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:background="@color/authColorBackground"
+                        android:layout_weight="1"/>
+
+
+                   <Button
+                        android:id="@+id/tstBtn4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="49dp"
+                        android:text="4"
+                        android:textColor="@android:color/black"
+                        android:gravity="start|center_vertical"
+                        android:fontFamily="sans-serif"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:background="@color/authColorBackground"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignStart="@android:id/text1"
+                    android:layout_below="@android:id/text1"
+                    android:id="@android:id/text2"
+
+                    >
+                    <Button
+                        android:id="@+id/tstBtn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="49dp"
+                        android:text="3"
+                        android:textColor="@android:color/black"
+                        android:gravity="start|center_vertical"
+                        android:fontFamily="sans-serif"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:background="@color/authColorBackground"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@android:id/text2"
+                    >
+                    <Button
+                        android:id="@+id/tstBtn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="49dp"
+                        android:text="2"
+                        android:textColor="@android:color/black"
+                        android:gravity="start|center_vertical"
+                        android:fontFamily="sans-serif"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:background="@color/authColorBackground"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/tstBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:text="1 * 2 * 3 * 4"
+                android:textColor="@android:color/black"
+                android:gravity="start|center_vertical"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:background="@color/authColorBackground"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/landing_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@color/authColorBackgroundLight"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabMode="scrollable">
+
+        </android.support.design.widget.TabLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.rb.workcatalog.custom.CustomViewPager
+        android:id="@+id/landing_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
