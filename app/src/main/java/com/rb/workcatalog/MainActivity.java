@@ -21,6 +21,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -251,7 +252,11 @@ public class MainActivity extends AppCompatActivity implements PasswordForgotFra
         Log.e("MAIN","enableApp(9:"+tabsArray);
         AppConfig.getInstance().setOnTabChangeListener(this);
         FireDB.getInstance().parseTabs();
+
+
+        Toast.makeText(this, BASE_URL , Toast.LENGTH_SHORT).show();
     }
+    public final static String BASE_URL = BuildConfig.BASE_URL;
 
     @Override
     public void onChangeComplete(TabItem tab) {

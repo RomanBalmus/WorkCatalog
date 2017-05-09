@@ -27,11 +27,13 @@ android {
     }
     buildTypes {
         release {
+            buildConfigField 'String', 'BASE_URL', '"http://prod.serverapi.com"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.releaseConfig
         }
         debug {
+            buildConfigField 'String', 'BASE_URL', '"http://dev.serverapi.com"'
             signingConfig signingConfigs.debugConfig
         }
     }
